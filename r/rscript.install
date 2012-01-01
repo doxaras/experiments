@@ -1,0 +1,4 @@
+#! /usr/bin/Rscript --vanilla --default-packages=utils
+args <- commandArgs(TRUE)
+res <- try(install.packages(args))
+if(inherits(res, "try-error")) q(status=1) else q()
